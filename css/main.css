@@ -1,0 +1,31 @@
+body{
+    color: #222;
+    font-family: Verdana, sans-serif;
+    font-size: .9em;
+}
+a:link, a:visited { text-decoration: none; color: #222;}
+a:active, a:hover { text-decoration: underline; color:black;}
+.gist{
+    margin-bottom: 7px;
+}
+.container{
+    width: 950px;
+    margin:0 auto;
+}
+.dates{
+    font-size: .8em;
+    color: #828282;
+}
+.files{
+    font-size: .8em;
+}
+.file{
+    padding: 3px 7px;
+    border-radius: 3px;
+    display: inline-block;
+    background: #ccc;
+    margin: 1px 3px;
+}
+.file a:link, .file a:visited{
+    color: white;
+}
