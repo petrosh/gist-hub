@@ -1,6 +1,7 @@
-
-$(document).ready(function(){
-    
+$(function () {
+//$(document).ready(function(){
+    var github,
+        user;
     init();
 
     function init() {
@@ -58,12 +59,12 @@ $(document).ready(function(){
             });
         });
         // AUTHENTICATE
-        var github = new Github({
+        github = new Github({
             username: user,
             password: pass
         });
         // USER
-        var user = github.getUser();
+        user = github.getUser();
         user.gists(function (err, gists) {
             // TODO: check empty objects and empty gists
             $.each( gists, function (index, item){
