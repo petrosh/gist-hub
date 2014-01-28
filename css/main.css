@@ -5,6 +5,9 @@ body{
 }
 a:link, a:visited { text-decoration: none; color: #222;}
 a:active, a:hover { text-decoration: underline; color:black;}
+.inner{
+    display: inline-block;
+}
 .gist{
     padding: 3px 5px;
     border-top: 1px solid #eee;
@@ -18,6 +21,7 @@ a:active, a:hover { text-decoration: underline; color:black;}
     font-size: .8em;
     color: #aaa;
     font-style: italic;
+    margin-left: .5em;
 }
 .files{
     font-size: .8em;
