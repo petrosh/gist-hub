@@ -6,26 +6,30 @@ body{
 a:link, a:visited { text-decoration: none; color: #222;}
 a:active, a:hover { text-decoration: underline; color:black;}
 .gist{
-    margin-bottom: 7px;
+    padding: 3px 5px;
+    border-top: 1px solid #eee;
+    line-height: 1.2em;
 }
-.container{
+#wrapper{
     width: 950px;
     margin:0 auto;
 }
 .dates{
     font-size: .8em;
-    color: #828282;
+    color: #aaa;
+    font-style: italic;
 }
 .files{
     font-size: .8em;
+    margin-left: .5em;
 }
 .file{
-    padding: 3px 7px;
-    border-radius: 3px;
     display: inline-block;
-    background: #ccc;
-    margin: 1px 3px;
+    margin-right: 1em;
 }
-.file a:link, .file a:visited{
-    color: white;
+.langbullet{
+    display: inline-block;
+    width: .8em;
+    height: .8em;
+    margin-right: .2em;
 }

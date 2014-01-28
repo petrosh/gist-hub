@@ -1,30 +1,3 @@
-// repos of authenticated
-/* user.repos(function(err, repos) {
-	//console.log('repos of authenticated',repos);
-	$.each( repos, function (index,value){
-	  var actualrepo = github.getRepo('petrosh', value.name);
-		actualrepo.show(function(err, info) {
-			//console.log(JSON.stringify(info, null, 4));
-			console.log('repo info',info);
-		});
-	  actualrepo.languages(function(err, language){
-		  console.log('repo languages', language);
-		});
-	})
-}); */
-
-// User Rate Limit
-/* user.ratelimit(function(err, ratelimit) {
-	console.log('Rate Limit', ratelimit);
-}); */
-
-// other user info
-//var username = 'michael';
-/**
-user.show(username, function(err, caio) {
-    console.log('caio info', caio)
-});
-*/
 
 $(document).ready(function(){
     
@@ -99,14 +72,14 @@ $(document).ready(function(){
                 $.each( item.files, function (fileindex, filevalue){
                     if (undefined == langColor[filevalue.language]) langColor[filevalue.language]='#ccc';
                     filelist.append(
-                        $('<div/>', {'class': 'file', 'style': 'background:' + langColor[filevalue.language] }).append(
+                        $('<div/>', {'class': 'file' }).append(
+                            $('<span/>', {'class': 'langbullet', 'style': 'background-color:' + langColor[filevalue.language] }),
                             $('<a/>', {text: filevalue.filename, href: item.html_url + '#file-' + fileindex.replace(/\./g, '-') })
                         )
                     );
                 });
                 // dates
-                var dates = $('<i/>', {'class': 'dates'}).append(
-                    ' - ',
+                var dates = $('<div/>', {'class': 'dates'}).append(
                     $('<span/>', { title: item.created_at }), ' (modified ',
                     $('<span/>', { title: item.updated_at }), ')'
                 )
@@ -117,28 +90,7 @@ $(document).ready(function(){
                 )
                 console.log(item);
             });
-            $('i.dates span').timeago();
+            $('.dates span').timeago();
         });
     };
 });
-
-    
-    // PRINT ON DIV
-/*     function cl(div,array){
-        for (var i in array) {
-            $( div ).append( array[i][0] , ": " , array[i][1], "<br>" )
-        };
-    } */
-/*
-user.userGists(username, function(err, gists) {
-console.log('caio gists', gists)
-});
-*/
-/* user.userRepos(username, function(err, repos) {
-	$.each( repos, function (index, value){
-		var actualrepo = github.getRepo( username, value.name);
-		actualrepo.languages(function(err, language) {
-			console.log('repo',value,'language',language);
-		});
-	})
-}); */
