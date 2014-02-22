@@ -100,7 +100,7 @@ $(function () {
             $("#out").append(
                 $('<div/>', {'class': 'gist'}).append(
                     $('<div/>', { 'class': 'icon ' + item.public }).append(
-                        $('<img/>', { src: 'css/svg/' + item.public })),
+                        $('<img/>', { src: 'css/svg/' + item.public + '.svg' })),
                     $('<a/>', {text: title, href: item.html_url, target: '_blank' }), edit, dates, filelist
                 )
             )
