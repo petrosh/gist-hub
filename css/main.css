@@ -1,39 +1,63 @@
+html{overflow-y:scroll;}
 body{
     color: #222;
     font-family: Verdana, sans-serif;
-    font-size: .9em;
+    background: lightblue;
 }
+header, footer{
+    text-align:center;
+}
+section{background:white;}
 a:link, a:visited { text-decoration: none; color: #222;}
 a:active, a:hover { text-decoration: underline; color:black;}
 .inner{
     display: inline-block;
 }
 .gist{
-    padding: 3px 5px;
+    padding: 6px 2px;
     border-top: 1px solid #eee;
     line-height: 1.2em;
 }
-#wrapper{
-    width: 950px;
-    margin:0 auto;
-}
-.dates{
+.dates, .owner{
     font-size: .8em;
     color: #aaa;
     font-style: italic;
-    margin-left: .5em;
+/*     margin-left: .5em; */
 }
+.owner a{color:#4183c4;}
 .files{
     font-size: .8em;
-    margin-left: .5em;
+    padding: 0px 10px;
+    margin: 2px;
+    list-style-type: none;
 }
 .file{
-    display: inline-block;
-    margin-right: 1em;
+/*     display: inline-block;
+    margin-right: 1em; */
 }
 .langbullet{
     display: inline-block;
-    width: .8em;
-    height: .8em;
-    margin-right: .2em;
+    width: 1em;
+    height: 1em;
+}
+/*
+** ---------- ICONS ----------
+*/
+.icon{
+    display:inline-block;
+    margin: 0px 7px -3px 0px;
+}
+.icon img, footer img{display:block;width:1em;}
+li img{ display: inline-block; width:1em;}
+.false{ background: lightgoldenrodyellow;}
+/* RAW ICON */
+.raw, .edit{
+    margin:0px 7px;
+}
+/*
+** ---------- DIVS ----------
+*/
+#out, #starred{
+/*     width:47%;
+    float:left; */
 }

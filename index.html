@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>GIST-HUB</title>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" title="main">
+    <link rel="stylesheet" href="css/grid.css" type="text/css" media="screen" title="main">
     <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" title="main">
     <script src="js/underscore-min.js" type="text/javascript"></script>
     <script src="js/base64.js" type="text/javascript"></script>
@@ -13,41 +15,61 @@
     <script src="js/main.js" type="text/javascript"></script>
   </head>
   <body>
-    <div id="wrapper">
 
-      <div class="pagehead">
+      <header>
         <div class="container">
-          <h1>GIST-HUB</h1>
-        </div>
-      </div><!-- pagehead -->
+          <div class="row clearfix">
+            <div class="column half">
+              <h1>GIST-HUB</h1>
 
-      <div class="container">
-        <div id="logindiv">
-          <h3>Login</h3>
-          <label for="username">Username</label><input type="text" name="username" value="" id="username">
-          <label for="password">Password</label><input type="password" name="password" value="" id="password">
-          <label for="remember">Remember me</label><input type="checkbox" name="remember" value="" id="remember">
-          <input type="button" name="login" value="Login" id="login">
-        </div>
-        <div id="logoutdiv">
-          <h3>Login</h3>
-          <label for="forget">Forget me</label><input type="checkbox" name="forget" value="" id="forget">
-          <input type="button" name="logout" value="Logout" id="logout">
-        </div>
-        
-        <h3>
-          <img src="svg/gist.svg" height="25"><div class="inner">your Gists</div>
-        </h3>
-        <div id="out"></div>
+              <form autocomplete="off" id="logindiv" style="display: none;text-align:right">
 
-        <h3>
-          <div class="inner">visual</div>
-        </h3>
-        <div id="visual"></div>
-        
-        <input type="button" name="clearstorage" value="Clear Storage" id="clearstorage">
-      </div><!-- container -->
+                <label for="username">Username</label>
+                <input type="text" name="username" value="" id="username">
+                <br><br>
+                <label for="password">Password</label>
+                <input type="password" name="password" value="" id="password">
+                <br><br>
+                <label for="remember">Remember me</label>
+                <input type="checkbox" name="remember" value="" id="remember">
+                <br><br>
+                <input type="button" name="login" value="Login" id="login">
+                <br><br>
+              </form>
 
-    </div><!-- wrapper -->
+              <div id="logoutdiv" style="display: none;">
+                <p><a href="#" id="logout">logout</a></p>
+              </div>
+
+            </div>
+            <div class="column half">
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="container">
+
+          <div class="row clearfix">
+            <div class="column half" id="out">
+            </div>
+            <div class="column half" id="starred">
+            </div>
+          </div>
+
+        </div><!-- container -->
+      </section>
+      
+      <footer>
+        <div class="container clearfix">
+          <p>
+            <a href="http://petrosh.github.io/gist-hub/" title="GIST-HUB">
+              <img src="css/svg/octicons.svg">
+            </a>
+          </p>
+        </div>
+      </footer>
+
   </body>
 </html>

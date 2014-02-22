@@ -132,6 +132,13 @@
           cb(err,res);
         });
       };
+      
+      // List authenticated user's starred gist
+      this.starredGists = function(cb) {
+        _request("GET", "/gists/starred", null, function(err, res) {
+          cb(err,res);
+        });
+      };
 
       // List authenticated user's unread notifications
       // -------
